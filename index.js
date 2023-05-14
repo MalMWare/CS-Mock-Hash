@@ -45,7 +45,7 @@ hashPassword = async (username, password) => {
     // TODO: Make the password hash using bcrypt
     let pwhash = await bcrypt.hash(password, 12)
     // TODO: Add the user and password hash to the global store object
-    globalStore[username] = hashedPassword
+    globalStore[username] = pwhash
     // TODO: Print a status update including the username and password hash
     console.log(`${username} exists and their hashed password is ${pwhash}`)
 }
